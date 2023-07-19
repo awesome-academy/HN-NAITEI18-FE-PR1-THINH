@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #444;
+  &::before {
+    box-sizing: border-box;
+  }
+  &::after {
+    box-sizing: border-box;
+  }
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: white;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+picture {
+  display: block;
+  max-width: 100%;
+}
+video {
+  display: block;
+  max-width: 100%;
+}
+canvas {
+  display: block;
+  max-width: 100%;
+}
+svg {
+  display: block;
+  max-width: 100%;
+}
+input {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+button {
+  font: inherit;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+textarea {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+p {
+  overflow-wrap: break-word;
+}
+h1 {
+  overflow-wrap: break-word;
+}
+h2 {
+  overflow-wrap: break-word;
+}
+h3 {
+  overflow-wrap: break-word;
+}
+h4 {
+  overflow-wrap: break-word;
+}
+h5 {
+  overflow-wrap: break-word;
+}
+h6 {
+  overflow-wrap: break-word;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
