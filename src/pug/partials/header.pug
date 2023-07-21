@@ -1,1 +1,19 @@
-header
+header.header
+  nav.header__nav.navbar.navbar-expand-lg
+    div.header__content
+      a.nav__logo.navbar-brand(href="")
+        .logo__first-charbox  
+          p.logo__first-char m
+        h3.logo__char andala
+      .nav__content.d-none.d-lg-flex
+        ul.nav__links.navbar_nav
+          each item in navLinks
+            +linkItemNav("#", item)
+      .nav__left-box
+        i.fa-solid.fa-cart-shopping 
+        i.fa-solid.fa-magnifying-glass
+        button.nav__button-toggle.d-lg-none
+          i.nav__menu-icon.fa-solid.fa-bars
+  div.header__banner-box
+    img.header__banner.d-none.d-sm-block(src="../assets/images/bg_header.png", alt="banner")
+    img.header__banner--mobile.d-sm-none(src="../assets/images/bg_header-mobile.png", alt="banner")

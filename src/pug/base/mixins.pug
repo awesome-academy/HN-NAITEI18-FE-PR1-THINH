@@ -1,1 +1,4 @@
-
+mixin linkItemNav(href, title)
+  li.nav__link
+    a(class!=attributes.class, href=href)=title
+    i.fa-solid.fa-chevron-down
