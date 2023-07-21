@@ -1,1 +1,103 @@
+.header {
+  overflow: hidden;
+}
 
+nav.header__nav {
+  @include flex;
+  padding: 0.5rem 1rem;
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    padding: 0.5rem 18vw;
+  }
+  @include responsive($breakpoint: $breakpoint-xl) {
+    padding: 0.5rem 20vw;
+  }
+}
+
+.header__banner-box {
+  @include flex($jutify: space-between, $align: flex-start);
+  background-color: $color-gray-banner-bg;
+}
+
+.header__content {
+  width: 100%;
+  @include flex($jutify: space-between, $gap: 0.5rem);
+
+  .nav__logo {
+    @include flex($align: flex-start, $gap: 0.5rem);
+
+    .logo__first-charbox {
+      @include flex;
+      background-color: $color-main;
+      height: 5rem;
+      width: 5rem;
+      .logo__first-char {
+        text-transform: lowercase;
+        font-family: $font-Androgyne;
+        @include text-style(
+          $size: 3.6rem,
+          $color: $color-white,
+          $weight: normal
+        );
+        text-align: center;
+        padding-bottom: 0.5rem;
+      }
+      border-radius: 50%;
+    }
+
+    .logo__char {
+      font-family: $font-Androgyne;
+      font-size: 2.4rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .nav__left-box {
+    @include flex($gap: 2rem);
+    .nav__button-toggle {
+      @include flex;
+      background-color: black;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 0.2rem;
+    }
+
+    i {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.nav__links {
+  @include flex($gap: 1.6rem);
+  margin-bottom: 0;
+  padding-left: 0;
+  .nav__link {
+    @include flex;
+    i {
+      padding-left: 0.5rem;
+      padding-bottom: 0.2rem;
+      font-size: 0.8rem;
+      color: transparent;
+      transition: all 0.2s linear;
+    }
+    a {
+      text-decoration: none;
+      @include text-style($size: 1rem, $color: $color-black, $weight: bold);
+      text-transform: uppercase;
+      transition: all 0.2s linear;
+    }
+
+    a:hover {
+      color: $color-main;
+    }
+
+    a:hover ~ i {
+      color: $color-main;
+    }
+  }
+}
+
+.nav__button-toggle i {
+  color: white;
+}
