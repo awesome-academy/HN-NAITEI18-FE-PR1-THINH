@@ -1,2 +1,76 @@
 extends ../layouts/default-layout.pug
 block content
+  main.main.container-fluid
+    ul.main__promotion-list.row
+      +promotionTag("fa-solid fa-plane", "Miễn phí vận chuyển trên toàn quố")(class="promotion__item col-lg-4")
+      .line 
+      +promotionTag("fa-solid fa-gift", "Nhận ngay quà tặng trị giá 350.000đ")(class="promotion__item col-lg-4")
+      .line 
+      +promotionTag("fa-solid fa-plane", "Giảm 30% cho đơn hàng trên 5.000.000đ")(class="promotion__item col-lg-4")
+    section.main__static-blog.container-fluid
+      .static-blog__item-group.row
+        img.static-blog__item.col-12(src="../assets/images/nuochoa_suatam.png" alt="nuoc hoa sua tam")
+        img.static-blog__item.col-12(src="../assets/images/corinne2015.png" alt="nuoc hoa sua tam")
+      .static-blog__item-group.row 
+        img.static-blog__item.col-12(src="../assets/images/combo_tam_trang.png" alt="nuoc hoa sua tam")
+        img.static-blog__item.col-12(src="../assets/images/trangsuc_daisy.png" alt="nuoc hoa sua tam")
+    section.main__feedback.row
+      .feedback__content.col-12.text-center 
+        p " Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto. "
+        i.fa-solid.fa-ellipsis
+      .feedback__author.col-12
+        img.author__avatar(src="../assets/images/avatar.png", alt="author avatar")
+        .author__info-box
+          h3.author__name TUTILE
+          p.author__position Giám đốc phát triển sản phẩm
+    section.main__category.row 
+      h3.category__tag.col-12 Sản phẩm mới
+      h2.category__tag.col-12 Sản phẩm bán chạy
+      h3.category__tag.col-12 Sản phẩm đặc biệt
+      .line__box.col-12
+        img(src="../assets/images/line.png", alt="line")
+      ul.category__items.col-12
+        each item in categories
+          li.category__item.col-5
+            i.fa-solid.fa-circle
+            p= item
+      .category__product
+        +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ")
+    section.main__more-info.row
+      .more-info__contacts.col-12
+        .more-info__contact
+          i.fa-brands.fa-facebook
+          p FACEBOOK
+        .more-info__contact
+          i.fa-brands.fa-twitter
+          p TWITTER
+      .more-info__aboutus
+        h2.aboutus__title VỀ CHÚNG TÔI
+        img(src="../assets/images/line.png", alt="line")
+        .logo-box
+          +logo()
+        h2.aboutus__sub-title GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA
+        p.aboutus__des Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+        a.aboutus__more(href="#") Đọc thêm
+      .more-info__blog
+        h2.blog__title BLOG
+        img(src="../assets/images/line.png", alt="line")
+        img.blog__image(src="../assets/images/blog_img.png", alt="line")
+        h2.blog__sub-title REVIEW SON KEM BOURJOIS VELVET
+        p.blog__content Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+        P.blog__info bởi NamTran (27/05/2015)
+        a.blog__more(href="#") Đọc thêm
+      .more-info__other
+        .other__mailing
+          h2.mailing__title GỬI EMAIL CHO CHÚNG TÔI
+          img(src="../assets/images/line.png", alt="line")
+          form.form-control
+            input(type="text", placeholder="Email của bạn") 
+          p Gửi email để nhận được những ưu đãi mới nhất
+          button.btn.btn-dark.btn-lg GỬI
+        .other__tag-product
+          h2.tag-product__title TAG SẢN PHẨM
+          img(src="../assets/images/line.png", alt="line") 
+          .tag-product__box
+            each item in productTag
+              .card.pe-3.ps-3.pb-1.pt-1= item

@@ -2,3 +2,28 @@ mixin linkItemNav(href, title)
   li.nav__link
     a(class!=attributes.class, href=href)=title
     i.fa-solid.fa-chevron-down
+
+mixin promotionTag(iconClass, title)
+  li(class!=attributes.class)
+    i(class=iconClass)
+    p= title 
+
+mixin logo()
+  .logo__first-charbox  
+    p.logo__first-char m
+  h3.logo__char andala
+  
+
+mixin productCard(imageUrl, alt, productTag, productName, productPrice, productOldPrice)
+  img.product__image(src=imageUrl, alt=alt)
+  h5.product__tag= productTag 
+  h3.product__name= productName
+  img.product__line
+  p.product__price= productPrice
+    span.product_sub-price= productOldPrice
+  .product__btn-box 
+    button.btn.btn-outline-dark.btn__add MUA HÀNG
+    button.btn.btn__like
+      i.fa-solid.fa-heart
+    button.btn.btn-outline-dark.btn__load
+      i.fa-solid.fa-rotate
