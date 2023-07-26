@@ -1,10 +1,8 @@
 header.header
   nav.header__nav.navbar.navbar-expand-lg
     div.header__content
-      a.nav__logo.navbar-brand(href="")
-        .logo__first-charbox  
-          p.logo__first-char m
-        h3.logo__char andala
+      a.nav__logo.navbar-brand(href="#")
+        +logo()
       .nav__content.d-none.d-lg-flex
         ul.nav__links.navbar_nav
           each item in navLinks
