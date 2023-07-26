@@ -5,10 +5,23 @@ header.header
         +logo()
       .nav__content.d-none.d-lg-flex
         ul.nav__links.navbar_nav
-          each item in navLinks
-            +linkItemNav("#", item)
+          each item in navLinks 
+            if item == "Sản phẩm"
+              +linkItemNav("#", item, true)
+            else
+              +linkItemNav("#", item, false)
       .nav__left-box
-        i.fa-solid.fa-cart-shopping 
+        .dropdown
+          a.nav__cart-icon.dropdown-toggle(href="#", data-bs-toggle="dropdown")
+            i.fa-solid.fa-cart-shopping
+          .dropdown-menu.cart-menu__items
+            +cartDropdownItem("../assets/images/cart_dropdown_img.png", "Áo sơ mi nam", "120.000đ")
+            +cartDropdownItem("../assets/images/cart_dropdown_img.png", "Áo sơ mi nam", "120.000đ")
+            .cart-menu__line
+            .cart-menu__total
+              p Tổng số
+              h5 240.000đ
+            button.btn.btn-dark.btn-lg.menu-cart__btn GIỎ HÀNG
         i.fa-solid.fa-magnifying-glass
         button.nav__button-toggle.d-lg-none
           i.nav__menu-icon.fa-solid.fa-bars

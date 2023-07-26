@@ -1,7 +1,25 @@
-mixin linkItemNav(href, title)
-  li.nav__link
-    a(class!=attributes.class, href=href)=title
-    i.fa-solid.fa-chevron-down
+mixin linkItemNav(href, title, isDropDown)
+  if isDropDown
+    li.nav__link
+      .dropdowm
+        a.dropdown-toggle(class!=attributes.class, href=href, data-bs-toggle="dropdown")=title
+        div.dropdown-menu.nav-dropdown__menu
+          .nav-dropdown__wrapper
+            +linkGroup('Dưỡng da', navLinks1, false)
+            +linkGroup('Nước hoa', navLinks2, false)
+            +linkGroup('Trang sức', navLinks2, false)
+  else
+    li.nav__link
+      a(class!=attributes.class, href=href)=title
+      i.fa-solid.fa-chevron-down
+
+mixin linkGroup(title, linkTitles, darkText)
+  .link-group-cus
+    h5.link-group__title= title
+    ul(class=darkText?'link-group__links text-white': 'link-group__links text-black')
+      each item in linkTitles
+        li.link-item__wrapper
+          a(class=darkText?'link-item text-white': 'link-item text-black', href="#")= item
 
 mixin promotionTag(iconClass, title)
   li(class!=attributes.class)
@@ -34,3 +52,10 @@ mixin contact(iconClass, title)
   div(class!=attributes.class)
     i(class=iconClass)
     p= title 
+
+mixin cartDropdownItem(imageUrl, title, price)
+  .cart-dropdown
+    img(src=imageUrl, alt=title)
+    .item__info
+      p.item__title= title
+      p.item__price= price

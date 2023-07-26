@@ -70,9 +70,51 @@ nav.header__nav {
     a:hover ~ i {
       color: $color-main;
     }
+
+    div.nav-dropdown__menu {
+      left: 18vw;
+      right: 18vw;
+      border: 2px solid $color-main;
+
+      .nav-dropdown__wrapper {
+        width: 100%;
+        height: 100%;
+        @include flex($jutify: space-around);
+      }
+    }
   }
 }
 
 .nav__button-toggle i {
   color: white;
+}
+
+div.cart-menu__items {
+  width: 21rem;
+  border: 2px solid $color-main;
+
+  .cart-menu__line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-gray-line;
+  }
+
+  .cart-menu__total {
+    @include flex($jutify: space-between);
+    padding: 1rem 1rem;
+    p,
+    h5 {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+
+    h5 {
+      color: $color-main;
+      font-family: $font-Androgyne;
+    }
+  }
+
+  .menu-cart__btn {
+    margin: 1rem;
+  }
 }
