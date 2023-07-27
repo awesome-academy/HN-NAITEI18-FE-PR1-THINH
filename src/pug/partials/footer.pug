@@ -1,1 +1,11 @@
-footer
+footer.footer
+  .footer__link-groups
+    +linkGroup('LIÊN HỆ VỚI CHÚNG TÔI', contactLinks, isFooter, isFirstFooter)
+    +linkGroup('CHUYỂN HÀNG', shippingLinks, isFooter)
+    +linkGroup('HỖ TRỢ', supportLinks, isFooter)
+    +linkGroup('THÔNG TIN', InfoLinks, isFooter)
+    +linkGroup('MY ACCOUNT', AccountLinks, isFooter)
+  .footer__copyright
+    p.copyright__content @ Copyright 2008-2014 DKT Technology JS
+    img.payment-icon(src="../assets/images/payment-method.png", alt="payment method")
+

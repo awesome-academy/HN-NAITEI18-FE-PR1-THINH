@@ -1,5 +1,8 @@
 extends ../layouts/default-layout.pug
 block content
+  div.banner-box
+    img.banner.d-none.d-sm-block(src="../assets/images/bg_header.png", alt="banner")
+    img.banner--mobile.d-sm-none(src="../assets/images/bg_header-mobile.png", alt="banner")
   main.main.container-fluid
     ul.main__promotion-list.row
       +promotionTag("fa-solid fa-plane", "Miễn phí vận chuyển trên toàn quố")(class="promotion__item col-md-4 flex-md-column text-center")
