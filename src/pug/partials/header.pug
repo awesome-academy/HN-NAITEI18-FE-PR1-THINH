@@ -12,7 +12,7 @@ header.header
               +linkItemNav("#", item, false)
       .nav__left-box
         .dropdown
-          a.nav__cart-icon.dropdown-toggle(href="#", data-bs-toggle="dropdown")
+          a.nav__cart-icon.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown")
             i.fa-solid.fa-cart-shopping
           .dropdown-menu.cart-menu__items
             +cartDropdownItem("../assets/images/cart_dropdown_img.png", "Áo sơ mi nam", "120.000đ")
@@ -25,6 +25,4 @@ header.header
         i.fa-solid.fa-magnifying-glass
         button.nav__button-toggle.d-lg-none
           i.nav__menu-icon.fa-solid.fa-bars
-  div.header__banner-box
-    img.header__banner.d-none.d-sm-block(src="../assets/images/bg_header.png", alt="banner")
-    img.header__banner--mobile.d-sm-none(src="../assets/images/bg_header-mobile.png", alt="banner")
+

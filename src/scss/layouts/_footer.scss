@@ -1,1 +1,77 @@
+footer.footer {
+  background-color: $color-black;
+  padding: 2rem 2.5rem;
+  @include responsive($breakpoint: $breakpoint-md) {
+    padding: 2rem 18vw;
+  }
+  @include responsive($breakpoint: $breakpoint-lg) {
+    padding: 2rem 20vw;
+  }
+  .footer__link-groups {
+    @include responsive($breakpoint: $breakpoint-xl) {
+      @include flex(
+        $direction: row,
+        $align: flex-start,
+        $jutify: space-between,
+        $gap: 1rem
+      );
+    }
+    .footer__link-group {
+      flex: 1.5;
+      padding: 2rem 0rem;
+      .footer__title {
+        color: $color-gray-light;
+        font-weight: 400;
+        width: 100%;
+      }
+      @include responsive($breakpoint: $breakpoint-md) {
+        padding: 2rem 0rem;
+      }
 
+      .footer__links {
+        gap: 0.7rem;
+        width: 100%;
+        .footer__item {
+          max-width: 60%;
+          @include responsive($breakpoint: $breakpoint-md) {
+            max-width: fit-content;
+            width: 100%;
+          }
+          .footer__link {
+            color: $color-gray-dark;
+            font-size: 1.3rem;
+            @include responsive($breakpoint: $breakpoint-xl) {
+              font-size: 1.2rem;
+            }
+            &:hover {
+              color: $color-main;
+            }
+          }
+        }
+      }
+    }
+    :first-child {
+      flex: 3;
+      padding-left: 0;
+    }
+    :last-child {
+      padding-right: 0;
+    }
+  }
+
+  .footer__copyright {
+    @include flex($direction: column, $align: flex-start, $gap: 1rem);
+    .copyright__content {
+      color: $color-gray-dark;
+      margin-bottom: 0;
+    }
+
+    .payment-icon {
+      width: 16rem;
+    }
+
+    @include responsive($breakpoint: $breakpoint-md) {
+      @include flex($jutify: space-between);
+    }
+  }
+}
