@@ -1,0 +1,13 @@
+mixin linkGroup(title, linkTitles, isFooter)
+  if isFooter
+    -var groupClass = footerGroupClass
+    -var linksClass = footerLinksClass
+    -var itemClass = footerItemClass
+    -var linkClass = footerLinkClass
+    -var titleClass = footerTitleClass
+  .link-group-cus(class=groupClass)
+    h5.link-group__title(class=titleClass)= title
+    ul.link-group__links(class=linksClass)
+      each item in linkTitles
+        li.link-item__wrapper(class=itemClass)
+          a.link-item(class=linkClass, href="#")= item

@@ -1,0 +1,16 @@
+.contact {
+  @include flex($gap: 1rem);
+
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  i {
+    font-size: 2.2rem;
+  }
+}
+
+.inactive * {
+  color: $color-gray-line;
+}

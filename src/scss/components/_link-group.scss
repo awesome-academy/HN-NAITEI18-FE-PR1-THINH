@@ -1,0 +1,25 @@
+.link-group-cus {
+  padding: 3rem 0;
+  padding-left: 3rem;
+  flex: 1;
+  @include flex($direction: column, $gap: 2rem, $align: flex-start);
+  .link-group__title {
+    font-weight: bold;
+  }
+  .link-group__links {
+    padding-left: 0;
+    @include flex($direction: column, $gap: 0.5rem, $align: flex-start);
+    .link-item__wrapper {
+      .link-item {
+        font-weight: normal;
+        transition: all linear 0.2s;
+        font-size: 1.2rem;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+  }
+}

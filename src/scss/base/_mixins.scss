@@ -13,7 +13,7 @@
   right: 0;
 }
 
-@mixin text-style($size, $color, $weight) {
+@mixin text-style($size: 1.6rem, $color: white, $weight: normal) {
   font-size: $size;
   font-weight: $weight;
   color: $color;

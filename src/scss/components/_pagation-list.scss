@@ -1,0 +1,24 @@
+.pagation-box {
+  padding: 0.72rem 0;
+  @include flex($jutify: space-between);
+  .pagation--left {
+    @include flex($gap: 1rem);
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  .pagation--right {
+    @include flex($gap: 1rem);
+    .pagation__page {
+      margin-bottom: 0;
+      color: $color-gray-line;
+      font-size: 1.2rem;
+    }
+    .active {
+      color: $color-black;
+    }
+    i {
+      font-size: 1.2rem;
+    }
+  }
+}

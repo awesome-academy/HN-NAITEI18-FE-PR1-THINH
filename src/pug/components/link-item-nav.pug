@@ -1,0 +1,14 @@
+mixin linkItemNav(href, title, isDropDown)
+  if isDropDown
+    li.nav__link
+      .dropdowm
+        a.dropdown-toggle(class!=attributes.class, href=href, data-bs-toggle="dropdown")=title
+        div.dropdown-menu.nav-dropdown__menu
+          .nav-dropdown__wrapper
+            +linkGroup('Dưỡng da', navLinks1, false)
+            +linkGroup('Nước hoa', navLinks2, false)
+            +linkGroup('Trang sức', navLinks2, false)
+  else
+    li.nav__link
+      a(class!=attributes.class, href=href)=title
+      i.fa-solid.fa-chevron-down

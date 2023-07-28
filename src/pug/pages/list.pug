@@ -1,0 +1,10 @@
+extends ../layouts/product-list-layout.pug
+block content
+  section.product-list.col-xl-9
+    +pagation()
+    .product-list__main.container-fluid
+      .row
+        +productItemList("../assets/images/product_mobile.png", "product", "Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới", productDes, "350.000đ")(class="proditem-list col-12")
+        +productItemList("../assets/images/product_mobile.png", "product", "Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới", productDes, "350.000đ")(class="proditem-list col-12")
+        +productItemList("../assets/images/product_mobile.png", "product", "Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới", productDes, "350.000đ")(class="proditem-list col-12")
+    +pagation()

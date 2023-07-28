@@ -1,0 +1,53 @@
+@import "./product-btn";
+
+div.proditem-list {
+  padding: 1rem 0;
+  @include flex($direction: column, $jutify: flex-start, $align: center);
+  @include responsive($breakpoint: $breakpoint-md) {
+    @include flex($jutify: flex-start, $align: flex-start);
+  }
+  .proditem-list__image {
+    max-height: 250px;
+  }
+  .proditem-list__content-box {
+    padding-top: 2rem;
+    height: 100%;
+    @include flex(
+      $direction: column,
+      $align: flex-start,
+      $jutify: space-between,
+      $gap: 1rem
+    );
+    .proditem-list__title {
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    .proditem-list__sold {
+      @include flex($gap: 1rem);
+      .sold__heart-icon {
+        @include flex($gap: 0.3rem);
+        i {
+          font-size: 1.2rem;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        color: $color-gray-line;
+      }
+    }
+
+    .proditem-list__des {
+      font-size: 1.2rem;
+      color: $color-gray-line;
+    }
+
+    .proditem-list__price {
+      font-size: 1.8rem;
+      color: $color-main;
+      font-weight: 500;
+      font-family: $font-Androgyne;
+    }
+  }
+}

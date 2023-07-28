@@ -1,3 +1,8 @@
+@import "../partials/home/contact";
+@import "../partials/home/promotion-tag";
+@import "../partials/home/main-feedback";
+@import "../partials/home/main-moreinfo";
+
 .banner-box {
   @include flex($jutify: space-between, $align: flex-start);
   background-color: $color-gray-banner-bg;
@@ -10,41 +15,9 @@ main.main {
   margin: 1rem 2rem;
 }
 
-ul.main__promotion-list {
-  padding-left: 0;
-  @include flex();
-
-  @include responsive($breakpoint: $breakpoint-md) {
-    padding: 0.5rem 16vw;
-  }
-  @include responsive($breakpoint: $breakpoint-xl) {
-    padding: 0.5rem 18vw;
-  }
-}
-
 .line {
   width: 100%;
   border-bottom: 0.15rem solid $color-gray-line;
-}
-
-li.promotion__item {
-  padding: 2rem 1rem;
-  @include flex($gap: 3rem);
-
-  p {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 500;
-    width: 40vw;
-    @include responsive($breakpoint: $breakpoint-md) {
-      width: auto;
-      min-height: 4rem;
-    }
-  }
-
-  i {
-    font-size: 2.4rem;
-  }
 }
 
 section.main__static-blog {
@@ -62,87 +35,6 @@ section.main__static-blog {
   padding: 0;
   width: 100vw;
   margin-bottom: 2rem;
-}
-
-section.main__feedback {
-  background-image: url("../assets/images/bgc_feedback.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 5rem 0;
-  padding-top: 3rem;
-
-  @include responsive($breakpoint: $breakpoint-md) {
-    margin: 0.5rem 16vw;
-    @include flex($direction: row-reverse);
-    background-position-x: right;
-    background-position-y: bottom;
-    background-size: 60% 60%;
-  }
-  @include responsive($breakpoint: $breakpoint-xl) {
-    margin: 0.5rem 18vw;
-    background-position: right;
-  }
-}
-
-div.feedback__content {
-  background-color: $color-white-trans-70;
-  p {
-    padding: 0 3rem;
-    font-size: 1.2rem;
-    @include responsive($breakpoint: $breakpoint-md) {
-      padding: 0;
-      width: 90%;
-      text-align: left;
-    }
-    @include responsive($breakpoint: $breakpoint-xl) {
-      width: 65%;
-    }
-  }
-  i {
-    font-size: 2rem;
-  }
-
-  @include responsive($breakpoint: $breakpoint-md) {
-    background-color: transparent;
-    @include flex($direction: column, $align: flex-start, $gap: 1rem);
-  }
-
-  .author__info-box {
-    min-width: 25rem;
-    @include flex($jutify: flex-start, $gap: 2rem);
-
-    p,
-    h5 {
-      margin: 0;
-      color: $color-gray-line;
-    }
-  }
-}
-
-div.feedback__author {
-  background-color: $color-white-trans-70;
-  padding: 2rem 0;
-  @include flex($gap: 1rem);
-
-  .author__avatar {
-    height: 7rem;
-    width: auto;
-
-    @include responsive($breakpoint: $breakpoint-md) {
-      height: 10rem;
-    }
-  }
-
-  .author__info-box {
-    .author__name {
-      color: #868e96;
-      margin: 0;
-    }
-    .author__position {
-      @extend .author__name;
-    }
-  }
 }
 
 section.main__category {
@@ -232,116 +124,4 @@ ul.category__items {
 
 .category__product {
   background-color: $color-white;
-}
-
-section.main__more-info {
-  padding: 3rem 0;
-  @include flex($direction: column, $gap: 3rem);
-
-  .more-info__wrapper {
-    width: 100%;
-  }
-
-  .more-info__contacts {
-    @include flex($jutify: space-around);
-    padding: 4rem 0;
-  }
-
-  .more-info__aboutus {
-    @include flex($direction: column, $jutify: flex-start, $gap: 1rem);
-    margin-bottom: 2rem;
-
-    .aboutus__title {
-      font-size: 1.6rem;
-      font-weight: bold;
-    }
-    .aboutus__sub-title {
-      font-size: 1.3rem;
-      font-weight: bold;
-      align-self: flex-start;
-    }
-
-    .logo-box {
-      @include flex($align: flex-start, $jutify: flex-start, $gap: 0.5rem);
-      align-self: flex-start;
-      margin: 2rem 0;
-    }
-
-    .aboutus__more {
-      align-self: flex-start;
-      color: $color-gray-line;
-      text-decoration: none;
-    }
-  }
-
-  @include responsive($breakpoint: $breakpoint-md) {
-    padding: 3rem 16vw;
-  }
-  @include responsive($breakpoint: $breakpoint-xl) {
-    padding: 3rem 18vw;
-  }
-}
-
-.more-info__blog {
-  @include flex($direction: column, $jutify: flex-start, $gap: 1rem);
-  margin-bottom: 2rem;
-
-  .blog__title {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-
-  .blog__image {
-    width: 100%;
-  }
-
-  .blog__sub-title,
-  .blog__info,
-  .blog__more {
-    align-self: flex-start;
-  }
-
-  .blog__more,
-  .blog__info {
-    color: $color-gray-line;
-    text-decoration: none;
-  }
-
-  .blog__more {
-    border-top: solid 1px $color-gray-line;
-    width: 100%;
-    padding-top: 0.5rem;
-  }
-}
-
-.other__mailing {
-  margin-bottom: 3rem;
-  @include flex($direction: column, $jutify: flex-start, $gap: 1rem);
-
-  .mailing__title {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-
-  .form-control {
-    margin: 2rem;
-  }
-
-  button {
-    padding: 0.5rem 2rem;
-  }
-}
-
-.other__tag-product {
-  @include flex($direction: column, $jutify: flex-start, $gap: 1rem);
-  .tag-product__box {
-    @include flex($gap: 0.5rem, $jutify: flex-start);
-    flex-wrap: wrap;
-    padding-top: 2rem;
-  }
-
-  .tag-product__title {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
 }

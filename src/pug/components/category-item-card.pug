@@ -1,0 +1,11 @@
+mixin categoryItem(title)
+  if block
+    .category-item__wrapper.category-item--open
+      p.category-item__title= title
+      i.fa-solid.fa-caret-down
+    ul.category-item__line
+      block
+  else
+    .category-item__wrapper
+      p.category-item__title= title
+      i.fa-solid.fa-caret-right

@@ -47,12 +47,15 @@ mixin productCard(imageUrl, alt, productTag, productName, productPrice, productO
     p.product__price= productPrice
       span.product_sub-price= productOldPrice
     if withButton 
-      .product__btn-box 
-        button.btn.btn-outline-dark.btn__add MUA HÀNG
-        button.btn.btn__like
-          i.fa-solid.fa-heart
-        button.btn.btn-outline-dark.btn__load
-          i.fa-solid.fa-rotate
+      +productBtn()
+
+mixin productBtn()
+  .product__btn-box 
+    button.btn.btn-outline-dark.btn__add MUA HÀNG
+    button.btn.btn__like
+      i.fa-solid.fa-heart
+    button.btn.btn-outline-dark.btn__load
+      i.fa-solid.fa-rotate
 
 mixin contact(iconClass, title)
   div(class!=attributes.class)
@@ -65,3 +68,45 @@ mixin cartDropdownItem(imageUrl, title, price)
     .item__info
       p.item__title= title
       p.item__price= price
+
+mixin categoryItem(title)
+  if block
+    .category-item__wrapper.category-item--open
+      p.category-item__title= title
+      i.fa-solid.fa-caret-down
+    ul.category-item__line
+      block
+  else
+    .category-item__wrapper
+      p.category-item__title= title
+      i.fa-solid.fa-caret-right
+
+mixin pagation()
+  .pagation-box
+    .pagation--left
+      i.fa-solid.fa-border-all
+      i.fa-solid.fa-list
+    .pagation--right
+      i.fa-solid.fa-caret-left
+      p.pagation__page.active 1
+      p.pagation__page 2
+      p.pagation__page 3
+      i.fa-solid.fa-caret-right
+
+mixin productItemList(imageUrl, alt, productTitle, productDes, productPrice)
+  div(class!=attributes.class)
+    img.proditem-list__image(src=imageUrl, alt=alt)
+    .proditem-list__content-box
+      h4.proditem-list__title= productTitle
+      .proditem-list__sold
+        .sold__heart-icon
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+        p.sold_quantity= '( 4 lượt mua )'
+      .proditem-list__des= productDes
+      .proditem-list__price= productPrice
+      .proditem-list__btn-box
+        +productBtn()

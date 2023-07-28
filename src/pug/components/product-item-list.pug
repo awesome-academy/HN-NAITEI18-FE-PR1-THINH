@@ -1,0 +1,19 @@
+include product-btn.pug
+
+mixin productItemList(imageUrl, alt, productTitle, productDes, productPrice)
+  div(class!=attributes.class)
+    img.proditem-list__image(src=imageUrl, alt=alt)
+    .proditem-list__content-box
+      h4.proditem-list__title= productTitle
+      .proditem-list__sold
+        .sold__heart-icon
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+        p.sold_quantity= '( 4 lượt mua )'
+      .proditem-list__des= productDes
+      .proditem-list__price= productPrice
+      .proditem-list__btn-box
+        +productBtn()

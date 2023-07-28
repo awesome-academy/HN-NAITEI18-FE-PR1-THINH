@@ -1,0 +1,16 @@
+.cart-dropdown {
+  @include flex($align: flex-start, $gap: 2rem);
+  padding: 1rem 0;
+
+  .item__info {
+    .item__title {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+    .item__price {
+      font-size: 1.6rem;
+      color: $color-main;
+      font-family: $font-Androgyne;
+    }
+  }
+}
