@@ -1,0 +1,4 @@
+mixin inputMixin(type, title, placeholder, inputId, defautVal)
+  .form-group.cus-input__wrapper
+    label.cus-input__title(for=inputId)= title
+    input.form-control.cus-input__item(type=type, id=inputId, placeholder=placeholder, value=defautVal)

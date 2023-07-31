@@ -7,6 +7,6 @@ mixin productCard(imageUrl, alt, productTag, productName, productPrice, productO
     h3.product__name= productName
     img.product__line
     p.product__price= productPrice
-      span.product_sub-price= productOldPrice
+      span.product__sub-price= productOldPrice
     if withButton 
       +productBtn()

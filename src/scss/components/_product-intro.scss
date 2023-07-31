@@ -1,0 +1,25 @@
+.product-intro__wrapper {
+  width: 80%;
+  @include flex($direction: column);
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    width: 100%;
+    @include flex($direction: row, $gap: 3rem);
+  }
+
+  .product-intro__image-box {
+    margin-bottom: 6rem;
+  }
+
+  .product-intro__content {
+    @include flex($direction: column, $align: flex-start, $gap: 1rem);
+    @include responsive($breakpoint: $breakpoint-md) {
+      width: 60%;
+    }
+    .content__title {
+    }
+
+    .content__description {
+    }
+  }
+}

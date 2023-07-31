@@ -1,0 +1,29 @@
+.product-shortcut {
+  @include flex($gap: 1rem);
+  padding: 2rem 0;
+  border-bottom: 1px dashed $color-gray-line;
+
+  .product-shortcut__info {
+    @include flex($direction: column, $gap: 0.5rem, $align: flex-start);
+    .product-shortcut__sold {
+      @include flex($direction: column, $align: flex-start);
+      @include responsive($breakpoint: $breakpoint-xxl) {
+        @include flex($gap: 1rem);
+      }
+      .sold__heart-icon {
+        @include flex($gap: 0.3rem);
+        i {
+          font-size: 1rem;
+        }
+      }
+      .sold__quantity {
+        margin-bottom: 0;
+        color: $color-gray-line;
+      }
+    }
+    .product-shortcut__price {
+      font-size: 1.4rem;
+      font-family: $font-Androgyne;
+    }
+  }
+}
