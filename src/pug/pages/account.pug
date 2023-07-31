@@ -1,0 +1,42 @@
+extends ../layouts/default-layout.pug
+
+block content
+  +breadcrum()
+  main.account.page-padding.container-fluid
+    section.row.account__wrapper
+      .account__table-box.col-xl-9
+        .account__title TÀI KHOẢN
+        table.account__table-content.table
+          thead.table-secondary.table__head.align-middle
+            tr.table__row
+              each item in accountTableHead
+                th(scope='col')= item
+          tbody.table__body
+            each val in [1 ,2 ,3, 4]
+              tr.table__row
+                each item, index in order1
+                  if index === 2 
+                    td.content--highlight= item
+                  else
+                    td= item
+            tr.table__row
+              each item, index in order2
+                if index === 2 
+                  td.content--highlight= item
+                else
+                  td= item
+      .account__detail.col-xl-3
+        h5.detail__title Chi tiết tài khoản
+        .detail__info
+          .detail__username-box
+            i.fa-solid.fa-user
+            p.detail__username GiangLe
+          .detail__email-box
+            i.fa-solid.fa-envelope
+            p.detail__email leanhgiang39@gmail.com
+          .detail__address-box
+            i.fa-solid.fa-location-pin
+            p.detail__address Tòa nhà Hà Nội group 442 Đội Cấn, Ba Đình, Hà Nội
+          .detail__phone-box
+            i.fa-solid.fa-phone
+            p.detail__phone (04) 3786 8904
