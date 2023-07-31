@@ -1,0 +1,80 @@
+section.main__feedback {
+  background-image: url("../assets/images/bgc_feedback.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 0;
+  padding-top: 3rem;
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    margin: 0.5rem 16vw;
+    @include flex($direction: row-reverse);
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 60% 60%;
+  }
+  @include responsive($breakpoint: $breakpoint-xl) {
+    margin: 0.5rem 18vw;
+    background-position: right;
+  }
+}
+
+div.feedback__content {
+  background-color: $color-white-trans-70;
+  p {
+    padding: 0 3rem;
+    font-size: 1.2rem;
+    @include responsive($breakpoint: $breakpoint-md) {
+      padding: 0;
+      width: 90%;
+      text-align: left;
+    }
+    @include responsive($breakpoint: $breakpoint-xl) {
+      width: 65%;
+    }
+  }
+  i {
+    font-size: 2rem;
+  }
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    background-color: transparent;
+    @include flex($direction: column, $align: flex-start, $gap: 1rem);
+  }
+
+  .author__info-box {
+    min-width: 25rem;
+    @include flex($jutify: flex-start, $gap: 2rem);
+
+    p,
+    h5 {
+      margin: 0;
+      color: $color-gray-line;
+    }
+  }
+}
+
+div.feedback__author {
+  background-color: $color-white-trans-70;
+  padding: 2rem 0;
+  @include flex($gap: 1rem);
+
+  .author__avatar {
+    height: 7rem;
+    width: auto;
+
+    @include responsive($breakpoint: $breakpoint-md) {
+      height: 10rem;
+    }
+  }
+
+  .author__info-box {
+    .author__name {
+      color: #868e96;
+      margin: 0;
+    }
+    .author__position {
+      @extend .author__name;
+    }
+  }
+}

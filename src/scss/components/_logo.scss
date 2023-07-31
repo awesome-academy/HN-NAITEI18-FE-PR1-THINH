@@ -1,0 +1,19 @@
+.logo__first-charbox {
+  @include flex;
+  background-color: $color-main;
+  height: 5rem;
+  width: 5rem;
+  .logo__first-char {
+    text-transform: lowercase;
+    font-family: $font-Androgyne;
+    @include text-style($size: 3.6rem, $color: $color-white, $weight: normal);
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  border-radius: 50%;
+}
+.logo__char {
+  font-family: $font-Androgyne;
+  font-size: 2.4rem;
+  padding-top: 0.5rem;
+}

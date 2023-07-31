@@ -1,0 +1,111 @@
+section.main__more-info {
+  padding: 3rem 0;
+  @include flex($direction: column, $gap: 3rem);
+
+  .more-info__wrapper {
+    width: 100%;
+  }
+
+  .more-info__contacts {
+    @include flex($jutify: space-around);
+    padding: 4rem 0;
+  }
+
+  .more-info__aboutus {
+    @include flex($direction: column, $jutify: flex-start, $gap: 1rem);
+    margin-bottom: 2rem;
+
+    .aboutus__title {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    .aboutus__sub-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      align-self: flex-start;
+    }
+
+    .logo-box {
+      @include flex($align: flex-start, $jutify: flex-start, $gap: 0.5rem);
+      align-self: flex-start;
+      margin: 2rem 0;
+    }
+
+    .aboutus__more {
+      align-self: flex-start;
+      color: $color-gray-line;
+      text-decoration: none;
+    }
+  }
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    padding: 3rem 16vw;
+  }
+  @include responsive($breakpoint: $breakpoint-xl) {
+    padding: 3rem 18vw;
+  }
+}
+
+.more-info__blog {
+  @include flex($direction: column, $jutify: flex-start, $gap: 1rem);
+  margin-bottom: 2rem;
+
+  .blog__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .blog__image {
+    width: 100%;
+  }
+
+  .blog__sub-title,
+  .blog__info,
+  .blog__more {
+    align-self: flex-start;
+  }
+
+  .blog__more,
+  .blog__info {
+    color: $color-gray-line;
+    text-decoration: none;
+  }
+
+  .blog__more {
+    border-top: solid 1px $color-gray-line;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+}
+
+.other__mailing {
+  margin-bottom: 3rem;
+  @include flex($direction: column, $jutify: flex-start, $gap: 1rem);
+
+  .mailing__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .form-control {
+    margin: 2rem;
+  }
+
+  button {
+    padding: 0.5rem 2rem;
+  }
+}
+
+.other__tag-product {
+  @include flex($direction: column, $jutify: flex-start, $gap: 1rem);
+  .tag-product__box {
+    @include flex($gap: 0.5rem, $jutify: flex-start);
+    flex-wrap: wrap;
+    padding-top: 2rem;
+  }
+
+  .tag-product__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,27 @@
+.category-item__wrapper {
+  @include flex($jutify: space-between);
+  border-bottom: 1px dashed $color-gray-light;
+  padding: 1rem 0;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.category-item__line {
+  padding-left: 3rem;
+  @include flex(
+    $direction: column,
+    $jutify: flex-start,
+    $align: flex-start,
+    $gap: 0.5rem
+  );
+
+  li {
+    list-style: disc;
+  }
+}
+
+.category-item--open {
+  border-bottom: 1px dashed transparent;
+}

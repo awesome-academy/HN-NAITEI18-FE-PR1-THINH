@@ -1,4 +1,6 @@
 extends ../layouts/default-layout.pug
+include ../partials/home/contact.pug
+include ../partials/home/promotion-tag.pug
 block content
   div.banner-box
     img.banner.d-none.d-sm-block(src="../assets/images/bg_header.png", alt="banner")
@@ -15,18 +17,7 @@ block content
       .static-blog__item-group.row 
         img.static-blog__item.col-12.col-md-6(src="../assets/images/combo_tam_trang.png" alt="nuoc hoa sua tam")
         img.static-blog__item.col-12.col-md-6(src="../assets/images/trangsuc_daisy.png" alt="nuoc hoa sua tam")
-    section.main__feedback.row
-      .feedback__content.col-12.text-center.col-md-10
-        p " Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto. "
-        .author__info-box.d-none.d-md-flex
-          h5.author__name TUTILE
-          p.author__position Giám đốc phát triển sản phẩm 
-        i.fa-solid.fa-ellipsis
-      .feedback__author.col-12.col-md-2
-        img.author__avatar(src="../assets/images/avatar.png", alt="author avatar")
-        .author__info-box.d-md-none
-          h3.author__name TUTILE
-          p.author__position Giám đốc phát triển sản phẩm
+    include ../partials/home/main-feedback.pug
     section.main__category.container-fluid
       .category__tag-wrapper.row
         p.category__tag.col-12.col-md-4.text-md-center Sản phẩm mới
@@ -34,7 +25,7 @@ block content
         p.category__tag.col-12.col-md-4.text-md-center Sản phẩm đặc biệt
       .category__line-wrapper.row
         .line__box.col-12
-          img(src="../assets/images/line.png", alt="line")
+          img(src="../assets/images/line_slash.png", alt="line")
       ul.category__items.row
         each item in categories
           li.category__item.col-5.col-md-2
@@ -47,44 +38,4 @@ block content
         +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", withButton)(class="product col-12 col-xl-2 d-none d-xl-flex")
         +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", !withButton)(class="product col-12 col-xl-2 d-none d-xl-flex")
         +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", !withButton)(class="product white-blur col-12 col-xl-2 d-none d-xl-flex")
-    section.main__more-info.container-fluid
-      .more-info__wrapper.row
-        .more-info__contacts.col-12
-          +contact("fa-brands fa-facebook", "FACEBOOK")(class="contact")
-          +contact("fa-brands fa-twitter", "TWITTER")(class="contact inactive")
-          +contact("fa-brands fa-instagram", "INSTAGRAM")(class="contact inactive d-none d-md-flex")
-          +contact("fa-brands fa-google-plus-g", "GOOGLE+")(class="contact inactive d-none d-md-flex")
-          +contact("fa-brands fa-pinterest", "PINTEREST")(class="contact inactive d-none d-lg-flex")
-          +contact("fa-brands fa-linkedin", "LINKEDIN")(class="contact inactive d-none d-lg-flex")
-      .more-info__wrapper.row
-        .more-info__aboutus.col-12.col-md-6.col-xl-4
-          h2.aboutus__title VỀ CHÚNG TÔI
-          img(src="../assets/images/line.png", alt="line")
-          .logo-box
-            +logo()
-          h2.aboutus__sub-title GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA
-          p.aboutus__des Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
-          a.aboutus__more(href="#") Đọc thêm
-        .more-info__blog.col-12.col-md-6.col-xl-4
-          h2.blog__title BLOG
-          img(src="../assets/images/line.png", alt="line")
-          img.blog__image(src="../assets/images/blog_img.png", alt="line")
-          h4.blog__sub-title REVIEW SON KEM BOURJOIS VELVET
-          p.blog__content Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
-          P.blog__info bởi NamTran (27/05/2015)
-          a.blog__more(href="#") Đọc thêm
-        .more-info__other.contaier-fluid.col-xl-4
-          .row
-            .other__mailing.col-12.col-md-6.col-xl-12
-              h2.mailing__title GỬI EMAIL CHO CHÚNG TÔI
-              img(src="../assets/images/line.png", alt="line")
-              form.form-control
-                input(type="text", placeholder="Email của bạn") 
-              p Gửi email để nhận được những ưu đãi mới nhất
-              button.btn.btn-dark.btn-lg GỬI
-            .other__tag-product.col-12.col-md-6.col-xl-12
-              h2.tag-product__title TAG SẢN PHẨM
-              img(src="../assets/images/line.png", alt="line") 
-              .tag-product__box
-                each item in productTag
-                  .card.pe-3.ps-3.pb-1.pt-1= item
+    include ../partials/home/main-moreinfo.pug

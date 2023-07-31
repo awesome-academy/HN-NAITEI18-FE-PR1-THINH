@@ -1,0 +1,31 @@
+ul.main__promotion-list {
+  padding-left: 0;
+  @include flex();
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    padding: 0.5rem 16vw;
+  }
+  @include responsive($breakpoint: $breakpoint-xl) {
+    padding: 0.5rem 18vw;
+  }
+}
+
+li.promotion__item {
+  padding: 2rem 1rem;
+  @include flex($gap: 3rem);
+
+  p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 40vw;
+    @include responsive($breakpoint: $breakpoint-md) {
+      width: auto;
+      min-height: 4rem;
+    }
+  }
+
+  i {
+    font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,12 @@
+include product-btn.pug
+
+mixin productCard(imageUrl, alt, productTag, productName, productPrice, productOldPrice, withButton)
+  div(class!=attributes.class)
+    img.product__image(src=imageUrl, alt=alt)
+    h5.product__tag= productTag 
+    h3.product__name= productName
+    img.product__line
+    p.product__price= productPrice
+      span.product_sub-price= productOldPrice
+    if withButton 
+      +productBtn()

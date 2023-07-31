@@ -1,0 +1,17 @@
+extends ../base/base.pug
+block productsLayout 
+  .app
+    include ../partials/header.pug
+    main.products-page
+      div.products-page__breadcrumb(style="--bs-breadcrumb-divider: '>';", aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item Home
+          li.breadcrumb-item Sản phẩm
+          li.breadcrumb-item(aria-current='page') Trang Sức
+      .products-page__banner-box.d-none.d-xl-block
+        img(src="../assets/images/grid_list_banner.png", alt="banner")
+      .product-list__wrapper.container-fluid
+        .row
+          include ../partials/sidebar.pug
+          block content
+    include ../partials/footer.pug

@@ -1,0 +1,13 @@
+extends ../layouts/product-list-layout.pug
+block content
+  section.product-grid.col-xl-9
+    +pagation()
+    .product-grid__main.container-fluid
+      .row
+        +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", withButton)(class="product col-6 col-md-4")
+        +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", withButton)(class="product col-6 col-md-4")
+        +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", withButton)(class="product col-6 col-md-4")
+        +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", withButton)(class="product col-6 col-md-4")
+        +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", withButton)(class="product col-6 col-md-4")
+        +productCard("../assets/images/product_mobile.png", "product", "HOME", "Mỹ phẩm châu Âu", "350.000đ", "450.000đ", withButton)(class="product col-6 col-md-4")
+    +pagation()

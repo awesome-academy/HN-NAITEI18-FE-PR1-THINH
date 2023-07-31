@@ -1,0 +1,21 @@
+.products-page__sidebar.col-xl-3
+  .sidebar__category
+    .sidebar__category-title
+      i.fa-solid.fa-bars
+      p DANH MỤC SẢN PHẨM
+    .sidebar__categories
+      each item in categoryItems
+        if item == 'TRANG SỨC'
+          +categoryItem(item)(class="category-item--open")
+            each val in jewelries
+              li= val
+        else
+          +categoryItem(item)
+    .sidebar__compare
+      h4.compare__title SO SÁNH SẢN PHẨM
+      p.compare__des Bạn chưa có sản phẩm nào để so sánh
+    .sidebar__product-tag
+      h4.product-tag__title TAG SẢN PHẨM
+      .product-tag__list
+        each item in sideBarProductags
+          .card.pe-3.ps-3.pb-1.pt-1= item

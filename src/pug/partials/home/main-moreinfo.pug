@@ -1,0 +1,41 @@
+section.main__more-info.container-fluid
+  .more-info__wrapper.row
+    .more-info__contacts.col-12
+      +contact("fa-brands fa-facebook", "FACEBOOK")(class="contact")
+      +contact("fa-brands fa-twitter", "TWITTER")(class="contact inactive")
+      +contact("fa-brands fa-instagram", "INSTAGRAM")(class="contact inactive d-none d-md-flex")
+      +contact("fa-brands fa-google-plus-g", "GOOGLE+")(class="contact inactive d-none d-md-flex")
+      +contact("fa-brands fa-pinterest", "PINTEREST")(class="contact inactive d-none d-lg-flex")
+      +contact("fa-brands fa-linkedin", "LINKEDIN")(class="contact inactive d-none d-lg-flex")
+  .more-info__wrapper.row
+    .more-info__aboutus.col-12.col-md-6.col-xl-4
+      h2.aboutus__title VỀ CHÚNG TÔI
+      img(src="../assets/images/line_slash.png", alt="line")
+      .logo-box
+        +logo()
+      h2.aboutus__sub-title GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA
+      p.aboutus__des Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+      a.aboutus__more(href="#") Đọc thêm
+    .more-info__blog.col-12.col-md-6.col-xl-4
+      h2.blog__title BLOG
+      img(src="../assets/images/line_slash.png", alt="line")
+      img.blog__image(src="../assets/images/blog_img.png", alt="line")
+      h4.blog__sub-title REVIEW SON KEM BOURJOIS VELVET
+      p.blog__content Hi, chào các nàng... sau khá nhiều lời hứa thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+      P.blog__info bởi NamTran (27/05/2015)
+      a.blog__more(href="#") Đọc thêm
+    .more-info__other.contaier-fluid.col-xl-4
+      .row
+        .other__mailing.col-12.col-md-6.col-xl-12
+          h2.mailing__title GỬI EMAIL CHO CHÚNG TÔI
+          img(src="../assets/images/line_slash.png", alt="line")
+          form.form-control
+            input(type="text", placeholder="Email của bạn") 
+          p Gửi email để nhận được những ưu đãi mới nhất
+          button.btn.btn-dark.btn-lg GỬI
+        .other__tag-product.col-12.col-md-6.col-xl-12
+          h2.tag-product__title TAG SẢN PHẨM
+          img(src="../assets/images/line_slash.png", alt="line") 
+          .tag-product__box
+            each item in productTag
+              .card.pe-3.ps-3.pb-1.pt-1= item

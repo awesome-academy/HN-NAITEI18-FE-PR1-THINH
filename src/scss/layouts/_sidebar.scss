@@ -1,0 +1,50 @@
+.products-page__sidebar {
+  padding: 1rem 0;
+  padding-bottom: 2rem;
+  .sidebar__category {
+    .sidebar__category-title {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px dashed $color-gray-light;
+      padding-bottom: 0.5rem;
+      @include flex($jutify: flex-start, $gap: 1rem);
+      i,
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+
+    .sidebar__categories {
+      margin-bottom: 2rem;
+    }
+
+    .sidebar__compare {
+      padding-bottom: 1rem;
+      h4 {
+        border-bottom: 1px dashed $color-gray-light;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .sidebar__product-tag {
+      .product-tag__title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-bottom: 1px dashed $color-gray-light;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .product-tag__list {
+        @include flex($gap: 0.5rem, $jutify: flex-start);
+        flex-wrap: wrap;
+        padding-top: 1rem;
+      }
+    }
+  }
+}
