@@ -1,0 +1,51 @@
+extends ../layouts/default-layout.pug
+block content
+  main.product-detail 
+    +breadcrum()
+    div.product-detail__wrapper.page-padding
+      .product-detail__images-demo
+        div.images-demo__sub-images
+          each item in subImagesUrl
+            img(src=item, alt="sub image demo")
+        div.product-detail__image-box
+          img.product-detail__image(src="./assets/images/lac-tay-silver.png", alt="image demo")
+      .product-detail__content-box
+        .product-detail__title
+          h4.main-title LẮC TAY TYFFANY XU HƯỚNG MỚI NHẤT
+          p.sub-title TYFFANY MS 3201
+        .product-detail__price-box 
+          p.curr-price 955.000đ
+          p.old-price 999.000đ
+        .product-detail__des= productDetailDes
+        form.product-detail__form
+          +selectInput('MÀU SẮC', productDetailColorVals, 'color-select')
+          +selectInput('SIZE', productDetailSizeVals, 'size-select')
+          +inputMixin('number', 'SỐ LƯỢNG', '', 'number-input', 1)
+        +productBtn()
+        .product-detail__sharing
+          p Shopping & <strong>Return</strong>
+          img(src="../assets/images/social-media-share.png", alt="social media")
+    .product-detail__more.page-padding
+      .product-detail__intro
+        .product-intro__tabbar
+          h4.tabbar__header.tabbar__header--active ĐẶC ĐIỂM NỔI BẬ
+          h4.tabbar__header THÔNG TIN SẢN PHẨM
+          h4.tabbar__header ĐÁNH GIÁ
+        .product-intro
+          +productIntro("../assets/images/lac-tay-blue-white.png", "THE MARK OF A LEGEND", productIntroDesDump, "flex--left")
+          +productIntro("../assets/images/lac-tay-blue-white.png", "THE MARK OF A LEGEND", productIntroDesDump, "flex--right")
+          +productIntro("../assets/images/lac-tay-blue-white.png", "THE MARK OF A LEGEND", productIntroDesDump, "flex--left")
+          +productIntro("../assets/images/lac-tay-blue-white.png", "THE MARK OF A LEGEND", productIntroDesDump, "flex--right")
+      .product-detail__widget.d-none.d-xl-flex
+        .widget__wrapper
+          h4.widget__title SẢN PHẨM BÁN CHẠY
+          ul.widget__shortcuts
+            +productShortcut("../assets/images/lac-tay-bong-tai.png", 'Mỹ phẩm châu Âu', '355.000đ',4, 12)
+            +productShortcut("../assets/images/lac-tay-bong-tai.png", 'Mỹ phẩm châu Âu', '355.000đ',4, 12)
+            +productShortcut("../assets/images/lac-tay-bong-tai.png", 'Mỹ phẩm châu Âu', '355.000đ',4, 12)
+        .widget__wrapper
+          h4.widget__title SẢN PHẨM MUA NHIỀU
+          ul.widget__shortcuts
+            +productShortcut("../assets/images/lac-tay-bong-tai.png", 'Mỹ phẩm châu Âu', '355.000đ',4, 12)
+            +productShortcut("../assets/images/lac-tay-bong-tai.png", 'Mỹ phẩm châu Âu', '355.000đ',4, 12)
+            +productShortcut("../assets/images/lac-tay-bong-tai.png", 'Mỹ phẩm châu Âu', '355.000đ',4, 12)

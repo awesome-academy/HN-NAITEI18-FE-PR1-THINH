@@ -1,0 +1,7 @@
+mixin productIntro(imageUrl,title, description, alignClass)
+  .product-intro__wrapper(class=alignClass)
+    .product-intro__image-box
+      img(src=imageUrl, alt="product image")
+    .product-intro__content
+      h3.content__title(class=alignClass)= title
+      p.content__description(class=alignClass)= description

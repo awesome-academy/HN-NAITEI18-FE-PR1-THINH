@@ -15,8 +15,8 @@
 
   .product__line {
     width: 5rem;
-    height: 0.2rem;
-    color: $color-gray-line;
+    height: 0.1rem;
+    background-color: $color-gray-line;
   }
 
   .product__price {
@@ -26,7 +26,8 @@
     font-family: $font-Androgyne;
   }
 
-  .product_sub-price {
+  .product__sub-price {
+    margin-left: 0.5rem;
     font-family: $font-Androgyne;
     font-size: 1.2rem;
     color: $color-gray-line;

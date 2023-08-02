@@ -15,3 +15,38 @@ html {
 .white-blur {
   opacity: 0.5;
 }
+
+.page-padding {
+  padding: 1rem 1rem;
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    padding: 1rem 18vw !important;
+  }
+  @include responsive($breakpoint: $breakpoint-xl) {
+    padding: 1rem 20vw !important;
+  }
+}
+.page-margin {
+  margin: 1rem 1rem;
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    margin: 1rem 18vw !important;
+  }
+  @include responsive($breakpoint: $breakpoint-xl) {
+    margin: 1rem 20vw !important;
+  }
+}
+
+.flex--right {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.flex--left {
+  text-align: left;
+  align-self: flex-start;
+
+  @include responsive($breakpoint: $breakpoint-md) {
+    flex-direction: row-reverse !important;
+  }
+}

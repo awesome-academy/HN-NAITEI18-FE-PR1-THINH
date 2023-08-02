@@ -1,0 +1,7 @@
+
+mixin selectInput(title, values, selectId)
+  .select-input__wrapper.form-group
+    label.select-input__title(for=selectId)= title
+    select.select-input__item(id=selectId).form-control.form-select
+      for val in values
+        option= val

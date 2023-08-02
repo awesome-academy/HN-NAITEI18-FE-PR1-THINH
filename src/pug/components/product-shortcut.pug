@@ -1,0 +1,15 @@
+mixin productShortcut(imageUrl, title, price, numOfSold, numOfStar)
+  li.product-shortcut
+    .product-shortcut__img-box
+      img(src=imageUrl, alt="product image")
+    .product-shortcut__info
+      h5.product-shortcut__title= title
+      .product-shortcut__sold
+        .sold__heart-icon
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+          i.fa-solid.fa-heart
+        p.sold__quantity= '( 4 lượt mua )'
+      .product-shortcut__price= price
