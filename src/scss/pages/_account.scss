@@ -1,0 +1,82 @@
+.account {
+  .account__wrapper {
+    padding-bottom: 2.4rem;
+    .account__title {
+      height: 4rem;
+      font-size: 2rem;
+    }
+    .account__table-box {
+      margin-bottom: 3rem;
+      table.account__table-content {
+        .table__head {
+          .table__row {
+            text-align: center;
+            th {
+              padding: 1rem 0;
+            }
+          }
+        }
+        .table__body {
+          .table__row {
+            text-align: center;
+            td {
+              padding: 1rem 0;
+            }
+          }
+        }
+
+        @include responsive($breakpoint: $breakpoint-md) {
+          .table__row {
+            th,
+            td {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        th,
+        td {
+          font-size: 1rem;
+        }
+
+        .content--highlight {
+          color: $color-red-highlight;
+        }
+      }
+    }
+
+    .account__detail {
+      padding-left: 2rem;
+      .detail__title {
+        margin-bottom: 0;
+        height: 4rem;
+        border-bottom: 1px solid $color-gray-line;
+        font-size: 1.6rem;
+      }
+      .detail__info {
+        @include flex($direction: column, $align: flex-start, $gap: 1rem);
+        padding-top: 1rem;
+        .detail__username-box,
+        .detail__address-box,
+        .detail__email-box,
+        .detail__phone-box {
+          @include flex($gap: 1rem);
+        }
+
+        .detail__username-box {
+          .detail__username {
+            font-size: 2rem;
+          }
+        }
+        p {
+          margin-bottom: 0;
+          font-size: 1.2rem;
+        }
+
+        i {
+          font-size: 1.4rem;
+          min-width: 2rem;
+        }
+      }
+    }
+  }
+}
