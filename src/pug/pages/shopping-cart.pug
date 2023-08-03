@@ -1,0 +1,27 @@
+extends ../layouts/default-layout.pug
+
+block content
+  +breadcrum()
+  main.cart.page-padding
+    h1.cart__title GIỎ HÀNG
+    table.cart-table__content.table
+      thead.table-secondary.cart-table__head.align-middle
+        tr.cart-table__row
+          each item in cartTableHead
+            th(scope='col')= item
+      tbody.cart-table__body
+        each val in [1 ,2 ,3]
+          tr.cart-table__row
+            each item, index in cartItem
+              if index === 0
+                td.d-flex.justify-content-center
+                  img.cart-item__image(src=item, alt="lac tay")
+              else if index === 5
+                td
+                  i(class=item)
+              else
+                td= item
+    .cart__btn-box
+      button.btn.btn-dark.cart-btn__item TIẾP TỤC MUA HÀNG
+      button.btn.btn-dark.cart-btn__item XÓA
+      button.btn.btn-dark.cart-btn__item CẬP NHẬT

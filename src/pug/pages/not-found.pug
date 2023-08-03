@@ -1,0 +1,13 @@
+extends ../base/base.pug
+block layout 
+  main.not-found
+    .not-found__image-box
+      img(src="../assets/images/not-found-img.png", alt="404 image")
+    .not-found__title Đây không phải là trang web bạn đang tìm kiếm
+    form.not-found__form
+      .input__box
+        input(type="text", id="not-found-input") 
+        i.fa-solid.fa-magnifying-glass
+    .not-found__links
+      a(href="#").not-found__contact LIÊN HỆ
+      a(href="#").not-found__home TRANG CHỦ

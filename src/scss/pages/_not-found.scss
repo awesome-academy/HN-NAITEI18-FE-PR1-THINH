@@ -1,0 +1,37 @@
+.not-found {
+  @include flex($direction: column, $gap: 2rem);
+  height: 100vh;
+  .not-found__image-box {
+    width: 35%;
+  }
+  .not-found__title {
+    font-size: 2rem;
+    color: $color-gray-dark;
+  }
+  .not-found__form {
+    .input__box {
+      @include flex();
+      height: 3rem;
+      width: 30rem;
+      padding: 0 2rem;
+      border-radius: 1.5rem;
+      border: 1px solid $color-gray-line;
+      input {
+        flex: 1;
+      }
+    }
+  }
+  .not-found__links {
+    @include flex($gap: 2rem);
+    a {
+      text-decoration: none;
+      color: $color-gray-dark;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .not-found__contact {
+      padding-right: 2rem;
+      border-right: 2px solid $color-gray-line;
+    }
+  }
+}

@@ -6,10 +6,7 @@ header.header
       .nav__content.d-none.d-lg-flex
         ul.nav__links.navbar_nav
           each item in navLinks 
-            if item == "Sản phẩm"
-              +linkItemNav("#", item, true)
-            else
-              +linkItemNav("#", item, false)
+            +linkItemNav("#", item)
       .nav__left-box
         .dropdown
           a.nav__cart-icon.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown")
@@ -22,7 +19,9 @@ header.header
               p Tổng số
               h5 240.000đ
             button.btn.btn-dark.btn-lg.menu-cart__btn GIỎ HÀNG
-        i.fa-solid.fa-magnifying-glass
+        button.btn(data-bs-toggle="modal" data-bs-target="#popup-newletter")
+          i.fa-solid.fa-magnifying-glass
         button.nav__button-toggle.d-lg-none
           i.nav__menu-icon.fa-solid.fa-bars
+
 

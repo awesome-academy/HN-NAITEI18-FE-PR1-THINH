@@ -1,0 +1,10 @@
+
+mixin blogCard(imageUrl, title, description, info)
+  .blog-card__wrapper(class!=attributes.class)
+    img.blog-card__image(src=imageUrl, alt="line")
+    h4.blog-card__title= title
+    p.blog-card__content= description
+    P.blog-card__info= info
+    .blog-card__more
+      a.blog-card__more-link(href="#") Đọc thêm >
+      p.blog-card__comment 23 Bình luận

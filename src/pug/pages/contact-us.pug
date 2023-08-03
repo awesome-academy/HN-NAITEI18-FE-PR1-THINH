@@ -1,0 +1,16 @@
+extends ../layouts/default-layout.pug
+
+block content
+  +breadcrum()
+  main.contact-us.page-padding
+    h1.contact-us__title LIÊN HỆ
+    .contact-us__wrapper.container-fluid
+      .row
+        img.contact-us__image.col-lg-6(src="../assets/images/address.png", alt="contact-us us image")
+        .contact-us__content.col-lg-6
+          .contact-us__sub-title GỬI EMAIL CHO CHÚNG TÔI
+          form.contact-us__form
+            +inputMixin("text", "Tên*", "", "contact-us-name", "") 
+            +inputMixin("text", "Email*", "", "contact-us-name", "") 
+            +inputMixin("text", "Tin nhắn*", "", "contact-us-name", "") 
+            button.btn.btn-dark(type="submit").pe-3.ps-3 GỬI

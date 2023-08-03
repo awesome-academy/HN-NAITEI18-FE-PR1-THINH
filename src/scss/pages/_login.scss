@@ -1,0 +1,47 @@
+.login {
+  margin-bottom: 3rem;
+  .login__title {
+    font-size: 2.4rem;
+    margin: 2rem 0;
+    font-weight: 400;
+  }
+  .login__form-wrapper {
+    padding: 2rem 1rem;
+    @include responsive($breakpoint: $breakpoint-md) {
+      padding: 3rem 4rem;
+    }
+    background-color: $color-gray-form-bgc;
+    @include flex($direction: column, $align: flex-start, $gap: 1rem);
+    .login-form__title-box {
+      .login-form__title {
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+      .login-form__des {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+    .login__form {
+      @include flex($direction: column, $align: flex-start, $gap: 1rem);
+      width: 100%;
+      @include responsive($breakpoint: $breakpoint-lg) {
+        width: 60%;
+      }
+      .login-form__footer {
+        margin-top: 2rem;
+        @include flex($gap: 1rem);
+        p {
+          margin-bottom: 0;
+        }
+        .login-form__fogot {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+        button {
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}

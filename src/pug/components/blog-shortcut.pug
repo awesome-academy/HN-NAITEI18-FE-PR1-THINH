@@ -1,0 +1,6 @@
+mixin blogShortcut(imageUrl, publishTime, author)
+  .blog-shortcut__wrapper
+    img(src=imageUrl, alt="blog shortcut image").blog-shortcut__image
+    .blog-shortcut__des
+      p.blog-shortcut__publish= publishTime
+      p.blog-shortcut__author= author

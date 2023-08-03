@@ -1,0 +1,28 @@
+.cart {
+  .cart__title {
+    font-weight: 400;
+  }
+  .cart-table__content {
+    margin: 2rem 0;
+    .cart-item__image {
+      height: 10rem;
+    }
+
+    th {
+      text-align: center;
+    }
+    td {
+      text-align: center;
+      line-height: 10;
+    }
+  }
+  .cart__btn-box {
+    @include flex($jutify: flex-end, $gap: 1rem);
+    .cart-btn__item {
+      padding: 1rem 2rem;
+      &:hover {
+        background-color: $color-main;
+      }
+    }
+  }
+}

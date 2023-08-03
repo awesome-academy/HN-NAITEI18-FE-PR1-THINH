@@ -1,0 +1,35 @@
+extends ../layouts/default-layout.pug
+
+block content
+  +breadcrum()
+  main.blog-detail.page-padding
+    h1.blog-detail__title BLOG
+    .blog-detail__wrapper.container-fluid
+      .row 
+        .blog-detail__sidebar.d-none.d-lg-flex.col-lg-3
+          .blog-sidebar__new-blogs 
+            .new-blog__title BÀI VIẾT MỚI NHẤT
+            .new-blog__list
+              +blogShortcut("../assets/images/blog_img.png", "11/Tháng 5", "Đăng bởi GiangLe")
+              +blogShortcut("../assets/images/blog_img.png", "11/Tháng 5", "Đăng bởi GiangLe")
+              +blogShortcut("../assets/images/blog_img.png", "11/Tháng 5", "Đăng bởi GiangLe")
+          .blog-sidebar__blog-tags 
+            .blog-tags__title BLOG TAGS
+            .blog-tags__list
+              each item, index in blogTags
+                if (index === 0)
+                  .card.pe-3.ps-3.pb-1.pt-1.blog-detail__tag--active.position-static= item
+                else
+                  .card.pe-3.ps-3.pb-1.pt-1.position-static= item
+          .blog-sidebar__blog-video
+            .blog-video__title LASTEST VIDEO
+            img(src="../assets/images/blog-detail-video.png", alt="blog detail video")
+        .blog-detail__content.col-12.col-lg-9
+          +blogCard("../assets/images/blog-detail-image.png", "NÀNG BÉO KHÔNG NGẠI DIỆN VÁY ÁO NỔI BẬT", blogDetailDes,"bởi NamTran (27/05/2015)")(class="blog-content__card")
+          .blog-content__tag Tags: <strong>Men</strong>
+          .blog-content__feedback
+            .blog-feedback__title ĐÓNG GÓP Ý KIẾN
+            form.blog-feedback__form
+              +inputMixin('text', 'Tên*', '', 'blog-feedback-name-input', '')
+              +inputMixin('text', 'Email*', '', 'blog-feedback-name-input', '')
+              +inputMixin('text', 'Ý kiến*', '', 'blog-feedback-name-input', '')
