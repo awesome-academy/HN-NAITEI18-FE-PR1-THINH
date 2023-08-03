@@ -1,0 +1,20 @@
+extends ../layouts/default-layout.pug
+
+block content
+  +breadcrum()
+  main.register.page-padding
+    h1.register__title ĐĂNG KÝ
+    form.register__form-wrapper
+      .register__info-form
+        .register__form-title THÔNG TIN CÁ NHÂN
+        +inputMixin('text', 'Tên trước*', '', 'register-first-name-input', '')
+        +inputMixin('text', 'Tên sau*', '', 'register-last-name-input', '')
+        +inputMixin('email', 'Email*', '', 'register-email-input', '')
+        +inputMixin('password', 'Password*', '', 'register-pasword-input', '')
+      .register__confirm-form
+        .register__form-title THÔNG TIN ĐĂNG NHẬP
+        +inputMixin('password', 'Mật khẩu*', '', 'register-password-input-2', '')
+        +inputMixin('password', 'Xác nhận mật khẩu*', '', 'register-confirm-password-input', '')
+      .register__btn-box
+        button.register__submit-btn.btn.btn-dark(type="submit") GỬI
+        button.register__back-btn.btn.btn-dark BACK

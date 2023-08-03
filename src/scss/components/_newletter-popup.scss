@@ -1,0 +1,48 @@
+.new-letter__modal {
+  .new-letter__content {
+    .new-letter__body {
+      background-color: white;
+      border-radius: 50%;
+      @include flex();
+      min-height: 30rem;
+      min-width: 30rem;
+      margin: 4rem 3rem;
+      margin-top: 10rem;
+      @include responsive($breakpoint: $breakpoint-md) {
+        margin: 0;
+        margin-top: 5rem;
+        height: 50rem;
+      }
+      background-image: url("../assets/images/popup-bgc-img.png");
+      background-size: cover;
+      .new-letter__body-box {
+        @include flex($direction: column, $gap: 2rem);
+        .new-letter__des-box {
+          p {
+            margin-bottom: 0;
+            @include responsive($breakpoint: $breakpoint-md) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .new-letter__form {
+          @include flex($direction: column, $gap: 1rem);
+          input {
+            height: 3rem;
+            width: 15rem;
+            border-radius: 1.5rem;
+            border: 1px solid $color-gray-line;
+            padding: 0 1rem;
+            @include responsive($breakpoint: $breakpoint-md) {
+              width: 30rem;
+            }
+          }
+          a {
+            color: $color-gray-dark;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+extends ../layouts/default-layout.pug
+
+block content
+  +breadcrum()
+  main.aboutus.page-padding
+    h1.aboutus__title VỀ CHÚNG TÔI
+    .aboutus__wrapper.container-fluid
+      .row
+        img.aboutus__image.col-lg-6(src="../assets/images/aboutus.png", alt="about us image")
+        .aboutus__content.col-lg-6
+          .aboutus__logo-box.d-flex
+            +logo()
+          .content__title GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA
+          .content__des= aboutUsDes
+          a.content__more(href="#") xem them

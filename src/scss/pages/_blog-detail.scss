@@ -1,0 +1,108 @@
+.blog-detail {
+  margin-bottom: 3rem;
+  .blog-detail__title {
+    font-weight: 400;
+  }
+  .blog-detail__wrapper {
+    .blog-detail__sidebar {
+      @include flex(
+        $direction: column,
+        $align: flex-start,
+        $jutify: flex-start,
+        $gap: 2rem
+      );
+      padding-left: 0;
+      padding: 2rem 0;
+      .blog-sidebar__title {
+        font-size: 1.4rem;
+        font-weight: 400;
+        border-bottom: 1px solid $color-gray-line;
+        padding-bottom: 0.5rem;
+      }
+      .blog-sidebar__new-blogs {
+        width: 100%;
+        .new-blog__title {
+          @extend .blog-sidebar__title;
+          margin-bottom: 1rem;
+        }
+      }
+      .blog-sidebar__blog-tags {
+        width: 100%;
+        .blog-tags__title {
+          @extend .blog-sidebar__title;
+        }
+        .blog-tags__list {
+          @include flex($gap: 0.5rem, $jutify: flex-start);
+          flex-wrap: wrap;
+          margin-top: 2rem;
+          .blog-detail__tag--active {
+            background-color: $color-main;
+            color: white;
+          }
+          div {
+            cursor: pointer;
+          }
+        }
+      }
+      .blog-sidebar__blog-video {
+        width: 100%;
+        .blog-video__title {
+          @extend .blog-sidebar__title;
+        }
+        img {
+          cursor: pointer;
+          margin-top: 2rem;
+        }
+      }
+    }
+    .blog-detail__content {
+      padding-left: 2rem;
+      @include responsive($breakpoint: $breakpoint-lg) {
+        padding-top: 4rem;
+      }
+      .blog-card__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-block: 2rem;
+      }
+      .blog-card__content {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      .blog-content__card {
+        padding: 0;
+        @include responsive($breakpoint: $breakpoint-lg) {
+          padding: 0 1rem;
+        }
+      }
+      .blog-content__tag {
+        margin: 0;
+        margin-top: 2rem;
+        @include responsive($breakpoint: $breakpoint-lg) {
+          margin: 0 1rem;
+          margin-top: 2rem;
+        }
+
+        border-bottom: 1px solid $color-gray-line;
+        padding-bottom: 0.2rem;
+        color: $color-gray-line;
+        strong {
+          color: black;
+        }
+      }
+      .blog-content__feedback {
+        margin-top: 4rem;
+        @include responsive($breakpoint: $breakpoint-lg) {
+          padding-left: 1rem;
+        }
+        .blog-feedback__title {
+          margin-bottom: 1.5rem;
+          font-size: 1.4rem;
+        }
+        .blog-feedback__form {
+          @include flex($direction: column, $gap: 1rem);
+        }
+      }
+    }
+  }
+}

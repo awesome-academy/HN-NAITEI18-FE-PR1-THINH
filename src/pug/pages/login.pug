@@ -1,0 +1,16 @@
+extends ../layouts/default-layout.pug
+
+block content
+  +breadcrum()
+  main.login.page-padding
+    h1.login__title ĐĂNG NHẬP
+    .login__form-wrapper
+      .login-form__title-box
+        h4.login-form__title KHÁCH HÀNG ĐĂNG KÝ
+        p.login-form__des Nếu bạn có một tài khoản, xin vui lòng đăng nhập.
+      form.login__form
+        +inputMixin('text', 'Địa chỉ email*', '', 'login-email-input', '')
+        +inputMixin('text', 'Địa chỉ password*', '', 'login-password-input', '')
+        .login-form__footer
+          p.login-form__fogot Quên mật khẩu?
+          button.btn.btn-dark(type="submit") ĐĂNG NHẬP

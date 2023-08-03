@@ -1,0 +1,39 @@
+.aboutus {
+  margin-bottom: 3rem;
+  .aboutus__title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin: 2rem 0;
+  }
+  .aboutus__wrapper {
+    .aboutus__image {
+      padding: 0;
+    }
+    .aboutus__content {
+      padding: 0;
+      margin-top: 3rem;
+      @include responsive($breakpoint: $breakpoint-lg) {
+        margin-top: 0;
+        padding-left: 2rem;
+      }
+      @include flex(
+        $direction: column,
+        $jutify: flex-start,
+        $align: flex-start,
+        $gap: 1rem
+      );
+      .aboutus__logo-box {
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .content__title {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .content__more {
+        text-decoration: none;
+        color: $color-gray-line;
+      }
+    }
+  }
+}

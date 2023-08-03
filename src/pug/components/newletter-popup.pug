@@ -1,0 +1,13 @@
+mixin newLetterPopup()
+  #popup-newletter.modal.fade(tabindex='-1', aria-hidden='true').new-letter__modal
+    .modal-dialog.new-letter__dialog
+      .model-content.new-letter__content
+        .modal-body.new-letter__body
+          .new-letter__body-box
+            h2.new-letter__title GỬI EMAIL
+            .new-letter__des-box 
+              p.new-letter__des Hãy gửi email liên hệ với chúng tôi để được tư vấn tốt nhẩt
+              p.new-letter__des Sự hài lòng của bạn là thành công của chúng tôi
+            form.new-letter__form
+              input(type="text", id="new-letter-input", placeholder="Email của bạn...").new-letter__input
+              a(href="#") GỬI EMAIL 

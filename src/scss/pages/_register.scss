@@ -1,0 +1,36 @@
+.register {
+  margin-bottom: 3rem;
+  .register__title {
+    font-size: 2.4rem;
+    margin: 2rem 0;
+    font-weight: 400;
+  }
+  .register__form-wrapper {
+    padding: 2rem 1rem;
+    @include responsive($breakpoint: $breakpoint-md) {
+      padding: 3rem 4rem;
+    }
+    background-color: $color-gray-form-bgc;
+    @include flex($direction: column, $align: flex-start, $gap: 1rem);
+
+    .register__info-form,
+    .register__confirm-form {
+      @include flex($direction: column, $align: flex-start, $gap: 1rem);
+      width: 100%;
+
+      .register__form-title {
+        font-size: 1.6rem;
+      }
+    }
+    .register__confirm-form {
+      margin-top: 2rem;
+    }
+    .register__btn-box {
+      width: 100%;
+      @include flex($jutify: space-between);
+      button {
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+}
